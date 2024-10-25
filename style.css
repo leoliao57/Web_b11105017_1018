@@ -3,11 +3,11 @@
     /* p0+m0 */
     padding: 0;
     margin: 0;
-    color: red
+    color: red;
 }
 
 body {
-    background: #000
+    /* background: #000; */
 }
 
 #nav {
@@ -16,14 +16,13 @@ body {
     width: 800;
     /* background: #333; */
     margin: 35px auto;
-    /* 定位 : 固定 */
-    padding: fixed;
-
+    /* 定位:固定 */
+    position: fixed;
 }
 
 #link {
     /* 靠右對齊 */
-    text-align: center;
+    text-align: right;
 }
 
 
@@ -34,11 +33,12 @@ a {
     text-decoration: none;
     font-size: 20px;
     padding: 0 20px;
+    /* 轉場:秒數 */
     transition: 0.6s;
 }
 
 a:hover {
-    color: burlywood;
+    color: #F5BB23;
 }
 
 /* 橫幅 */
@@ -51,7 +51,7 @@ a:hover {
 /* 內容區域 */
 .content {
     background-image: url(./img/paper.png);
-    height: 600px;
+    /* height: 600px; */
 }
 
 h1 {
@@ -60,4 +60,72 @@ h1 {
     padding: 20px 0;
     /* 文字粗細 */
     font-weight: 200;
+}
+
+/* 最新消息區 */
+#news {
+    /* 顯示:格線模式 */
+    display: grid;
+    /* 格線模板欄位:重複設定(重複幾次，單位) */
+    /* 1fr一格 */
+    grid-template-columns: repeat(3, 1fr);
+    /* gg20 格線間距 */
+    grid-gap: 20px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 20px 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 選取內容 */
+/* 第一選取格 空格 第二個選取 */
+.card img {
+    width: 100%;
+    opacity: 0.5;
+    transition: 0.7s;
+}
+
+.card h2 {
+    text-align: center;
+    padding: 10px 0 0;
+}
+
+.card h4 {
+    text-align: center;
+    color: aqua;
+    font-size: 10px;
+    font-weight: 100;
+    /* 文字間距 */
+    letter-spacing: 10px;
+}
+
+.card p {
+    height: 150px;
+    color: #555;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card hr {
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 10px;
+    width: 0;
+    border: 0;
+    transition: 0.7s;
+}
+
+/* 滑入卡片後設定水平線樣式 */
+.card:hover hr {
+    width: 100%;
+}
+
+.card:hover img {
+    opacity: 1;
 }
