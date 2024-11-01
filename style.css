@@ -129,3 +129,55 @@ h1 {
 .card:hover img {
     opacity: 1;
 }
+
+#product {
+    height: 500px;
+    width: 800px;
+    margin: 0 auto;
+    background-color: #333;
+    /* 文字對齊:置中(對行內元素調整齊) */
+    text-align: center;
+    position: relative;
+}
+
+#info {
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    /* background-color: blue; */
+    width: 250px;
+}
+
+/* 取得#info 內所有 h2 */
+#info h2 {
+    color: #F5BB23;
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+}
+
+#info h6 {
+    color: #666;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+#info p {
+    color: gray;
+    text-align-last: left;
+    line-height: 2;
+    letter-spacing: 15px;
+}
+
+/* 經營理念 */
+#idea {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 30px;
+    width: 800px;
+    margin: 0 auto;
+}
+
+#idea-pic img {
+    width: 100%;
+    border: 8px solid #fff;
+}
