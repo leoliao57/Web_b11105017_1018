@@ -21,7 +21,7 @@ nav {
 
 #nav {
     display: grid;
-    grid-template-columns: 30% 50% 20%;
+    grid-template-columns: 20% 40% 40%;
     width: 800;
     /* background: #333; */
     margin: 35px auto;
